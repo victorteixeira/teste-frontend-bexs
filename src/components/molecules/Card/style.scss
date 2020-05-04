@@ -32,7 +32,6 @@
     }
 
     &_front {
-      background: url('/static/images/card-front.svg');
       background-size: 100%;
       text-shadow: 0px 1px 2px #000000;
 
@@ -70,7 +69,6 @@
     }
 
     &_back {
-      background: url('/static/images/card-back-active.svg');
       background-size: 100%;
       transform: rotateY(180deg);
 
@@ -116,7 +114,6 @@
     }
 
     &_front {
-      background: url('/static/images/card-front.svg');
       text-shadow: 0px 1px 2px #000000;
 
       &_brand, &_number, &_owner, &_expiration{
@@ -149,7 +146,6 @@
     }
 
     &_back {
-      background: url('/static/images/card-back.svg');
       transform: rotateY(180deg);
 
       &_cvv {
@@ -163,13 +159,31 @@
   }
 }
 
+
+
+.card:not(.active) .card_front {
+  background: url('/static/images/card-front.svg');
+  background-size: 100% !important;
+}
+.card:not(.active).back .card_back {
+  background: url('/static/images/card-back.svg');
+  background-size: 100% !important;
+}
+
 .card.active .card_front {
-  background: url('/static/images/card-front-active.svg');
+  background: url('/static/images/card-front-mobile-active.svg');
+  background-size: 100% !important;
 
   &_brand{
     display: block;
   }
 }
-.card.active .card_back {
+.card.active.back .card_back {
   background: url('/static/images/card-back-active.svg');
+  background-size: 100% !important;
+
+  &_brand{
+    display: block;
+  }
 }
+
