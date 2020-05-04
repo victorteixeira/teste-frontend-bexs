@@ -1,0 +1,44 @@
+@media only screen and (max-width : 1023px) {
+
+.steps {
+  display: none;
+}
+
+}
+
+@media only screen and (min-width : 1024px) {
+.steps {
+  align-items: center;
+  box-sizing: border-box;
+  color: #DE4B4B;
+  display: flex;
+  font-size: 13px;
+  height: 22px;
+  margin-left: 27px;
+  margin-top: 50px;
+
+  &_step {
+    align-items: center;
+    display: flex;
+
+    i {
+      align-items: center;
+      border-radius: 50%;
+      border: 1.2px solid #DE4B4B;
+      box-sizing: border-box;
+      display: flex;
+      font-size: 13.6px;
+      font-weight: bold;
+      height: 22px;
+      justify-content: center;
+      margin-right: 7px;
+      width: 22px;
+    }
+  }
+
+  .arrow {
+    margin-left: 16px;
+    margin-right: 23px;
+  }
+}
+}
