@@ -1,0 +1,29 @@
+@media only screen and (max-width : 1023px) {
+  .button {
+    background: #DE4B4B;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: "SF Pro Text";
+    font-size: 17px;
+    height: 51px;
+    margin-top: 17px;
+    text-align: center;
+    width: 280px;
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .button {
+    background: #DE4B4B;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: "SF Pro Text";
+    font-size: 17px;
+    height: 51px;
+    margin-top: 20px;
+    text-align: center;
+    width: 246px;
+  }
+}
