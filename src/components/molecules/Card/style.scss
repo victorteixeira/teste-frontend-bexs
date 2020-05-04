@@ -1,0 +1,175 @@
+@media only screen and (max-width : 1023px) {
+  .card {
+    color: #FFF;
+    font-family: "SF Pro Text";
+    position: relative;
+    width: 280px;
+    height: 172px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 12px;
+
+    &_inner {
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      width: 100%;
+    }
+
+    &.back &_inner {
+      transform: rotateY(180deg);
+    }
+
+    &_front, &_back {
+      /*
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      */
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    &_front {
+      background: url('/static/images/card-front.svg');
+      background-size: 100%;
+      text-shadow: 0px 1px 2px #000000;
+
+      &_brand, &_number, &_owner, &_expiration{
+        position: absolute;
+      }
+
+      &_brand {
+        display: none;
+        left: 14px;
+        top: 27px;
+
+        img {
+          width: 53px;
+        }
+      }
+
+      &_number {
+        font-size: 19px;
+        left: 13px;
+        letter-spacing: 1.9px;
+        top: 81px;
+        word-spacing: 5px;
+      }
+
+      &_owner {
+        left: 13px;
+        top: 131px;
+      }
+
+      &_expiration {
+        right: 14px;
+        top: 131px;
+      }
+    }
+
+    &_back {
+      background: url('/static/images/card-back-active.svg');
+      background-size: 100%;
+      transform: rotateY(180deg);
+
+      &_cvv {
+        color: #3C3C3C;
+        font-weight: bold;
+        left: 141px;
+        position: absolute;
+        top: 86px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 1024px) {
+  .card {
+    color: #FFF;
+    font-family: "SF Pro Text";
+    font-size: 16px;
+    height: 224px;
+    margin-top: 29px;
+    position: relative;
+    width: 364px;
+
+    &_inner {
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      width: 100%;
+    }
+
+    &.back &_inner {
+      transform: rotateY(180deg);
+    }
+
+    &_front, &_back {
+      /*-webkit-backface-visibility: hidden;
+      backface-visibility: hidden;*/
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    &_front {
+      background: url('/static/images/card-front.svg');
+      text-shadow: 0px 1px 2px #000000;
+
+      &_brand, &_number, &_owner, &_expiration{
+        position: absolute;
+      }
+
+      &_brand {
+        display: none;
+        left: 26px;
+        top: 36px;
+      }
+
+      &_number {
+        font-size: 22px;
+        left: 30px;
+        letter-spacing: 2.31px;
+        top: 110px;
+        word-spacing: 8.7px;
+      }
+
+      &_owner {
+        left: 30px;
+        top: 168px;
+      }
+
+      &_expiration {
+        right: 34px;
+        top: 168px;
+      }
+    }
+
+    &_back {
+      background: url('/static/images/card-back.svg');
+      transform: rotateY(180deg);
+
+      &_cvv {
+        color: #3C3C3C;
+        font-weight: bold;
+        left: 183px;
+        position: absolute;
+        top: 111px;
+      }
+    }
+  }
+}
+
+.card.active .card_front {
+  background: url('/static/images/card-front-active.svg');
+
+  &_brand{
+    display: block;
+  }
+}
+.card.active .card_back {
+  background: url('/static/images/card-back-active.svg');
+}
